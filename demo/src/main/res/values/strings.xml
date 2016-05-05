@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HTRouter</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_product_detail">ProductDetailActivity</string>
+    <string name="title_activity_pay">PayActivity</string>
+    <string name="title_activity_web">WebActivity</string>
+</resources>

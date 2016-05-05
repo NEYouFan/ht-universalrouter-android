@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.netease.hearttouch.example">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:name="com.netease.hearttouch.example.HTApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.netease.hearttouch.example.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.netease.hearttouch.router.HTRouterActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 为了支持android M -->
+                <data android:host="www.kaola.com/" android:scheme="https" />
+                <data android:host="www.kaola.com/" android:scheme="http" />
+                <!-- 为了支持外部应用或者外部浏览器跳转本应用 -->
+                <data android:host="www.kaola.com" android:scheme="kaola" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.netease.hearttouch.example.ProductDetailActivity"
+            android:label="@string/title_activity_product_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.netease.hearttouch.example.PayActivity"
+            android:label="@string/title_activity_pay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.netease.hearttouch.example.WebActivity"
+            android:label="@string/title_activity_web"
+            android:theme="@style/AppTheme.NoActionBar"/>
+    </application>
+
+</manifest>
