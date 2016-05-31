@@ -48,7 +48,7 @@
 ```
 
 ### 初始化
-在`Application`的`onCreate()`中添加如下信息，其中`HTRouterActivity`、`HTLogUtil`、`HTRouterManager`、`HTRouterHandler`、`HTRouterHandlerParams`编译后会自动生成。
+在`Application`的`onCreate()`中添加如下信息，其中`HTRouterActivity`、`HTLogUtil`、`HTRouterManager`、`HTRouterHandler`、`HTRouterHandlerParams`编译后会自动生成（注：仅当有页面使用`@HTRouter`注解时,以上代码才会生成）。
 
 - 降级页面接收的`URL`的`key` 
 - 注册降级页面相应的`WebviewActivity`;
